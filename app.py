@@ -3,12 +3,23 @@ from pydantic import BaseModel
 import pandas as pd
 import numpy as np
 from tensorflow.keras.models import load_model
+from fastapi.middleware.cors import CORSMiddleware
 import joblib
 from datetime import datetime
 import uvicorn
 import os
 
+
 app = FastAPI(title="Sales Prediction API")
+
+# Configuración de CORS
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["https://frontend-r3.onrender.com"],  # Permite solo este origen
+    allow_credentials=True,
+    allow_methods=["*"],  # Permite todos los métodos (GET, POST, etc.)
+    allow_headers=["*"],  # Permite todos los encabezados
+)
 
 # Cargar datos y modelos al inicio
 try:
