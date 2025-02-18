@@ -6,6 +6,7 @@ from tensorflow.keras.models import load_model
 import joblib
 from datetime import datetime
 import uvicorn
+import os
 
 app = FastAPI(title="Sales Prediction API")
 
@@ -245,4 +246,5 @@ def predict_sales_endpoint(request: PredictionRequest):
         raise HTTPException(status_code=400, detail=str(e))
 
 if __name__ == "__main__":
-    uvicorn.run("main:app", host="0.0.0.0", port=8000)
+    port = int(os.environ.get("PORT", 10000))
+    uvicorn.run("main:app", host="0.0.0.0", port=port)
