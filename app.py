@@ -15,10 +15,10 @@ app = FastAPI(title="Sales Prediction API")
 # Configuración de CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://frontend-r3.onrender.com/"],  # Permite solo este origen
+    allow_origins=["https://frontend-r3.onrender.com"],
     allow_credentials=True,
-    allow_methods=["*"],  # Permite todos los métodos (GET, POST, etc.)
-    allow_headers=["*"],  # Permite todos los encabezados
+    allow_methods=["*"],  
+    allow_headers=["*"],  
 )
 
 # Cargar datos y modelos al inicio
