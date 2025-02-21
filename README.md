@@ -10,13 +10,11 @@ Este proyecto tiene como objetivo predecir las ventas futuras de una empresa uti
 
 ## Tecnologías Utilizadas
 - Lenguaje de Programación: Python 3.8+
-- Bibliotecas:
+Bibliotecas:
 - Pandas
 - NumPy
 - Scikit-Learn
 - TensorFlow/Keras
-- Matplotlib
-- Seaborn
 
 ## Autores
 - **Annaseanna** - *Desarrollador* - [Perfil de GitHub](https://github.com/Annaseanna)
